@@ -1,30 +1,51 @@
-### IntelliJ IDEA ###
+# Arquivos compilados
+*.class
+
+# Logs
+*.log
+
+# Diretórios de build
+target/
+build/
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+./out/
+
+# Eclipse
 .project
-.settings
-.springBeans
-.sts4-cache
+.classpath
+.settings/
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
+# NetBeans
+nbproject/private/
+build/
+dist/
+nbbuild/
+nbdist/
+
+# Arquivos do sistema operacional
 .DS_Store
+Thumbs.db
+
+# Variáveis de ambiente
+.env
+.env.*
+
+# Arquivos temporários
+*.tmp
+*.swp
