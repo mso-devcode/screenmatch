@@ -1,0 +1,13 @@
+package br.com.alura.desafio_02._04;
+
+public class ConversorTemperaturaPadrao implements ConversorTemperatura {
+    @Override
+    public  double celsiusParaFahrenheit(double temperaturaCelsius) {
+        return (temperaturaCelsius * 1.8) + 32;
+    }
+
+    @Override
+    public double fahrenheitParaCelsius(double temperaturaFahrenheit) {
+        return (temperaturaFahrenheit - 32) * 1.8;
+    }
+}
