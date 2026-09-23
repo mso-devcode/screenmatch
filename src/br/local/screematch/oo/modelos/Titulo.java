@@ -2,6 +2,11 @@ package br.local.screematch.oo.modelos;
 
 public class Titulo {
 
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -41,7 +46,6 @@ public class Titulo {
     }
 
     public double getSomaAvaliacoes() {
-
         return somaAvaliacoes;
     }
 

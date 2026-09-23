@@ -12,9 +12,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Poderso chefão");
-        meuFilme.setAnoDeLancamento(2018);
+        Filme meuFilme = new Filme("Poderso chefão", 2018);
         meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
@@ -25,11 +23,8 @@ public class Principal {
         System.out.println(meuFilme.getSomaAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2018);
+        Serie lost = new Serie("Lost", 2010);
         lost.setDuracaoEmMinutos(50);
-        //lost.setMinutosPorEpisodio(50);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -39,9 +34,7 @@ public class Principal {
         calculadora.inclui(meuFilme);
         System.out.println(calculadora.getTempoTotal());
 
-        Filme seuFilme = new Filme();
-        seuFilme.setNome("De volta para o Futuro");
-        seuFilme.setAnoDeLancamento(2000);
+        Filme seuFilme = new Filme("De volta para o Futuro", 2000);
         seuFilme.setDuracaoEmMinutos(120);
         calculadora.inclui(seuFilme);
         calculadora.inclui(lost);
@@ -56,10 +49,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(100);
         filtro.filtra(episodio);
 
-        var filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Veloz e Furiosos");
+        var filmeDoPaulo = new Filme("Veloz e Furiosos", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avaliaFilme(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
