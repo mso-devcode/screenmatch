@@ -1,4 +1,4 @@
-package br.local.screematch.oo;
+package br.local.screematch.principal;
 
 import br.local.screematch.oo.calculos.CalculadoraDeTempo;
 import br.local.screematch.oo.calculos.FiltroRecomendacao;
