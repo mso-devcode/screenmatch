@@ -1,6 +1,7 @@
 package br.local.screematch.oo.desafio_03;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Principal06 {
@@ -22,5 +23,16 @@ public class Principal06 {
         }
 
         System.out.println("O maior saldo é: " + maiorSaldo);
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Lucas");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Rodrigo");
+        buscaPorArtista.add("Antonio");
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação: " + buscaPorArtista);
+
+
     }
 }

@@ -5,6 +5,7 @@ import br.local.screematch.oo.modelos.Serie;
 import br.local.screematch.oo.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PrincipalComListas {
@@ -46,5 +47,20 @@ public class PrincipalComListas {
         */
         System.out.println("Tamanho da lista: " + listaDeAssistidos.size());
         System.out.println("Primeiro filme: " + listaDeAssistidos.get(0).getNome());
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Rodrigo Silva");
+        buscaPorArtista.add("Antonio Silva");
+
+        System.out.println(buscaPorArtista);
+        Collections.sort(buscaPorArtista);
+
+        System.out.println("Lista de Títulos ordenada:");
+        Collections.sort(listaDeAssistidos);
+        System.out.println(listaDeAssistidos);
+
+
     }
 }

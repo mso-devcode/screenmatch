@@ -1,6 +1,6 @@
 package br.local.screematch.oo.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
 
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
@@ -65,4 +65,8 @@ public class Titulo {
         return somaAvaliacoes / totalDeAvaliacao;
     }
 
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return  this.getNome().compareTo(outroTitulo.getNome());
+    }
 }
