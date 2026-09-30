@@ -6,6 +6,7 @@ import br.local.screematch.oo.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class PrincipalComListas {
@@ -60,6 +61,10 @@ public class PrincipalComListas {
         System.out.println("Lista de Títulos ordenada:");
         Collections.sort(listaDeAssistidos);
         System.out.println(listaDeAssistidos);
+
+        listaDeAssistidos.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+
+        System.out.println("Lista de Títulos ordenada por ano de lançamento:" + listaDeAssistidos);
 
 
     }
