@@ -1,7 +1,10 @@
 package br.local.screematch.principal;
 
 import br.local.screematch.oo.modelos.Titulo;
+import br.local.screematch.oo.modelos.TituloOMDB;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.net.URI;
@@ -30,9 +33,13 @@ public class PrincipalComBusca {
 
         System.out.println(response.body());
 
-        Gson gson = new Gson();
-        Titulo meuTitulo = gson.fromJson(response.body(), Titulo.class);
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+        TituloOMDB meuTituloOmdb = gson.fromJson(response.body(), TituloOMDB.class);
+        System.out.println(meuTituloOmdb);
 
-        System.out.println(meuTitulo);
+        Titulo meuTitulo = new Titulo(meuTituloOmdb);
+
+        System.out.println("Nome do filme: " + meuTitulo);
+
     }
 }
