@@ -1,6 +1,7 @@
 package br.local.screematch.principal;
 
 import br.local.screematch.oo.modelos.Titulo;
+import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.net.URI;
@@ -28,5 +29,10 @@ public class PrincipalComBusca {
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
         System.out.println(response.body());
+
+        Gson gson = new Gson();
+        Titulo meuTitulo = gson.fromJson(response.body(), Titulo.class);
+
+        System.out.println(meuTitulo);
     }
 }
